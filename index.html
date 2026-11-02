@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LORIAZ</title>
+<style>
+body{margin:0;font-family:sans-serif;background:#FFF8F5;color:#5A2D2B;text-align:center}
+.top{background:#5A2D2B;color:#fff;padding:8px;font-size:13px}
+.logo{font-size:32px;letter-spacing:6px;font-weight:900;padding:20px}
+.hero{padding:20px}
+.btn{display:inline-block;background:#5A2D2B;color:#fff;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold}
+.card{background:#fff;border-radius:20px;padding:15px;margin:15px;border:1px solid #eee}
+.form{background:#fff;border-radius:20px;padding:20px;margin:20px auto;max-width:400px;border:2px solid #E8DCC6}
+input,select{width:100%;padding:12px;border-radius:10px;border:1px solid #ddd;margin-top:10px;box-sizing:border-box}
+button{width:100%;background:#5A2D2B;color:#fff;padding:14px;border-radius:30px;border:none;font-size:18px;font-weight:bold;margin-top:15px}
+.wa{position:fixed;bottom:20px;left:20px;background:#25D366;color:#fff;padding:14px 20px;border-radius:30px;text-decoration:none;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="top">🚚 توصيل مجاني | الدفع عند الاستلام - LORIAZ</div>
+<div class="logo">LORIAZ</div>
+<div class="hero">
+<h1>جمالك.. من طبيعة مراكش</h1>
+<p>تركيبات طبيعية 100% بالأرغان وماء الورد</p>
+<a class="btn" href="#order">تسوقي الآن - 199 درهم</a>
+</div>
+<div class="card">
+<h3>سيروم الورد المضيء</h3>
+<p>199 درهم بدل 299 درهم</p>
+<a href="#order">أضيفي للسلة - COD</a>
+</div>
+<div id="order" class="form">
+<h2>اطلبي الآن - الدفع عند الاستلام</h2>
+<input id="name" placeholder="الاسم الكامل">
+<input id="phone" placeholder="رقم الهاتف 07...">
+<select id="city"><option>الدار البيضاء</option><option>الرباط</option><option>مراكش</option><option>فاس</option><option>أزيلال</option><option>بني ملال</option></select>
+<button onclick="order()">أكدي الطلب - واتساب</button>
+</div>
+<a class="wa" href="https://wa.me/212715250200">واتساب 0715250200 💬</a>
+<script>
+function order(){
+var n=document.getElementById('name').value;
+var p=document.getElementById('phone').value;
+var c=document.getElementById('city').value;
+if(!n||!p){alert('عمري الاسم والهاتف');return;}
+var msg=`طلب جديد LORIAZ%0Aالاسم: ${n}%0Aالهاتف: ${p}%0Aالمدينة: ${c}`;
+window.location.href=`https://wa.me/212715250200?text=${msg}`;
+}
+</script>
+</body>
+</html>
